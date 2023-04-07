@@ -1,3 +1,20 @@
+.menu-slider-wrapper {
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(
+      270deg,
+      #f8f8f8 16.84%,
+      rgba(248, 248, 248, 0.0001) 100%
+    );
+    width: 24px;
+  }
+}
+
 .menu-slider {
   @include reset-list;
   @include tt-400;
@@ -5,7 +22,17 @@
   overflow-x: scroll;
   color: #7e7e82;
   font-size: 16px;
+
   padding-left: 16px;
+
+  @media screen and (min-width: 768px) {
+    padding-left: 24px;
+  }
+
+  @media screen and (min-width: 1120px) {
+    padding-left: 34px;
+    flex-wrap: wrap;
+  }
 
   &::-webkit-scrollbar {
     display: none;
@@ -25,6 +52,6 @@
     // padding: 8px 16.54px;
     // немного не по канону, но шо поделать:
     padding: 8px 14.54px;
-    min-width: 246px;
+    white-space: nowrap;
   }
 }

@@ -1,4 +1,26 @@
 .post {
+  @media screen and (min-width: 510px) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__column {
+    @media screen and (min-width: 510px) {
+      width: 48%;
+    }
+
+    &--left {
+    }
+
+    &--right {
+      margin: 0 -16px;
+
+      @media screen and (min-width: 510px) {
+        margin: 0;
+      }
+    }
+  }
+
   &__short-description {
     @include reset-p;
     @include tt-400;
@@ -28,6 +50,6 @@
   }
 
   &__img {
-    max-width: 100%;
+    width: 100%;
   }
 }
