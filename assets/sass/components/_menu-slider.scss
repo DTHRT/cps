@@ -23,6 +23,14 @@
   color: #7e7e82;
   font-size: 16px;
 
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  // Chrome, Opera, Safari
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   padding-left: 16px;
 
   @media screen and (min-width: 768px) {
@@ -32,10 +40,6 @@
   @media screen and (min-width: 1120px) {
     padding-left: 34px;
     flex-wrap: wrap;
-  }
-
-  &::-webkit-scrollbar {
-    display: none;
   }
 
   &__slide {

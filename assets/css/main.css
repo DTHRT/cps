@@ -554,7 +554,12 @@ main {
   overflow-x: scroll;
   color: #7e7e82;
   font-size: 16px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
   padding-left: 16px;
+}
+.menu-slider::-webkit-scrollbar {
+  display: none;
 }
 @media screen and (min-width: 768px) {
   .menu-slider {
@@ -566,9 +571,6 @@ main {
     padding-left: 34px;
     flex-wrap: wrap;
   }
-}
-.menu-slider::-webkit-scrollbar {
-  display: none;
 }
 .menu-slider__slide--active .menu-slider__slide-btn {
   border: 2px solid #b8ffec;
