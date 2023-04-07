@@ -1,0 +1,30 @@
+.menu-slider {
+  @include reset-list;
+  @include tt-400;
+  display: flex;
+  overflow-x: scroll;
+  color: #7e7e82;
+  font-size: 16px;
+  padding-left: 16px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__slide {
+    &--active {
+      .menu-slider__slide-btn {
+        border: 2px solid $light-green-blue;
+        border-radius: 6px;
+      }
+    }
+  }
+
+  &__slide-btn {
+    @include reset-btn;
+    // padding: 8px 16.54px;
+    // немного не по канону, но шо поделать:
+    padding: 8px 14.54px;
+    min-width: 246px;
+  }
+}

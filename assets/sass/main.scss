@@ -6,9 +6,12 @@
 @import 'base/typography';
 
 @import 'layout/header';
+@import 'layout/main';
+@import 'layout/container';
 
 @import 'components/h1';
 @import 'components/buttons';
 @import 'components/menu-slider';
+@import 'components/post';
 
-@import 'pages/post';
+@import 'pages/posts';

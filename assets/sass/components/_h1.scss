@@ -1,0 +1,20 @@
+.heading {
+  @include reset-heading;
+  @include tt-700;
+  color: $black;
+  font-size: 28px;
+  position: relative;
+  padding: 0 16px;
+
+  &:after {
+    content: '';
+    width: 8px;
+    height: 40px;
+    background: $green-blue;
+    border-radius: 4px;
+    position: absolute;
+    left: -4px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
